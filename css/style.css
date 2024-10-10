@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 @font-face {
-  font-family: MyCustomFont;
+  font-family: Varsity_Regular;
   src: url("../fonts/varsity_regular.ttf");
+}
+@font-face {
+  font-family: Trajan_Pro_Bold;
+  src: url("../fonts/Trajan_Pro_Bold.ttf");
 }
 
 :root,
@@ -20,7 +24,7 @@ html {
 }
 
 :root {
-  --colorPrimary: #AD9132;
+  --colorPrimary: #ad9132;
   --colorSecondary: #ffc400;
   --colorWhite: #ffffff;
   --colorOffWhite: #f7f7f7;
@@ -28,7 +32,7 @@ html {
   --colorBlack: #000000;
   --colorHalfBlack: #333333;
   --colorBackgroundBlack: #343a40bd;
-  --colorGold: #B77F68;
+  --colorGold: #b77f68;
 
   /*  
   --main-color: 128, 0, 128; RGBA values for a purplish color 
@@ -39,7 +43,6 @@ html {
 
 /* For Desktop */
 @media only screen and (min-width: 990px) {
-
   header,
   main,
   footer {
@@ -130,7 +133,7 @@ aside {
   }
 }
 
-.navbar-brand{
+.navbar-brand {
   margin-right: 0px;
 }
 
@@ -147,19 +150,19 @@ aside {
   object-fit: cover;
 }
 
-/* @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .carousel-item .banner1 {
-    content: url("../img/banners/banner1.jpg");
+    content: url("../img/banner/mobile_banner11.jpg");
   }
 
   .carousel-item .banner2 {
-    content: url("../img/banners/banner2.jpg");
+    content: url("../img/banner/banner2.jpg");
   }
 
   .carousel-item .banner3 {
-    content: url("../img/banners/banner3.jpg");
+    content: url("../img/banner/banner3.jpg");
   }
-} */
+}
 
 /* InfoBox */
 .info-box {
@@ -260,11 +263,13 @@ aside {
 .offer-bg-animation {
   color: var(--colorWhite);
   display: block;
-  background: linear-gradient(-45deg,
-      var(--colorPrimary),
-      var(--colorSecondary),
-      var(--colorPrimary),
-      var(--colorSecondary));
+  background: linear-gradient(
+    -45deg,
+    var(--colorPrimary),
+    var(--colorSecondary),
+    var(--colorPrimary),
+    var(--colorSecondary)
+  );
   background-size: 400% 400%;
   -webkit-animation: 3s infinite Gradient;
   -moz-animation: 3s infinite Gradient;
@@ -321,6 +326,7 @@ aside {
   font-size: 1.7em;
   text-align: center;
   color: var(--colorPrimary);
+  font-family: Trajan_Pro_Bold;
 }
 
 /* For Desktop */
@@ -339,11 +345,13 @@ aside {
   padding-top: 10px;
   text-align: center;
   /* background: linear-gradient(-45deg, #f1f1f1, #c8c8c8, #f1f1f1, #c8c8c8); */
-  background: linear-gradient(-45deg,
-      var(--colorWhite),
-      var(--colorBorderWhite),
-      var(--colorWhite),
-      var(--colorBorderWhite));
+  background: linear-gradient(
+    -45deg,
+    var(--colorWhite),
+    var(--colorBorderWhite),
+    var(--colorWhite),
+    var(--colorBorderWhite)
+  );
   background-size: 400% 400%;
   -webkit-animation: Gradient 3s ease infinite;
   -moz-animation: Gradient 3s ease infinite;
@@ -411,7 +419,7 @@ aside {
 
 .over-img {
   width: 100%;
-  height: 300px;
+  height: 400px;
 }
 
 .over-img img {
@@ -431,11 +439,15 @@ aside {
 
 /* FLoor Plan Section */
 
+.floor-img {
+  filter: blur(2.5px);
+  -webkit-filter: blur(2.5px);
+}
+
 /* Amenities */
 
-
 figure.snip1186 {
-  font-family: 'Raleway', Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif;
   position: relative;
   overflow: hidden;
   /* margin: 10px; */
@@ -444,9 +456,21 @@ figure.snip1186 {
   color: #ffffff;
   text-align: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
-  background-image: linear-gradient(to top, var(--colorPrimary), var(--colorSecondary));
+  background-image: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  background-image: linear-gradient(
+    to top,
+    var(--colorPrimary),
+    var(--colorSecondary)
+  );
 }
 
 figure.snip1186 * {
@@ -510,7 +534,7 @@ figure.snip1186 p:before,
 figure.snip1186 p:after {
   position: absolute;
   height: 1px;
-  content: '';
+  content: "";
   background: white;
 }
 
@@ -540,8 +564,6 @@ figure.snip1186:hover img,
 figure.snip1186.hover img {
   opacity: 0.5;
 }
-
-
 
 /* Location Section */
 
@@ -742,7 +764,6 @@ figure.snip1186.hover img {
 /* ANIMATION */
 
 @keyframes rocking {
-
   0%,
   100%,
   25% {
@@ -759,7 +780,6 @@ figure.snip1186.hover img {
 }
 
 @-webkit-keyframes Gradient {
-
   0%,
   100% {
     background-position: 0 50%;
@@ -771,7 +791,6 @@ figure.snip1186.hover img {
 }
 
 @-moz-keyframes Gradient {
-
   0%,
   100% {
     background-position: 0 50%;
@@ -783,7 +802,6 @@ figure.snip1186.hover img {
 }
 
 @keyframes Gradient {
-
   0%,
   100% {
     background-position: 0 50%;
@@ -798,11 +816,13 @@ figure.snip1186.hover img {
 .effectMoveGradient:hover {
   text-shadow: 0 3px 6px var(--colorPrimary);
   background-color: var(--colorSecondary);
-  background: linear-gradient(-45deg,
-      var(--colorPrimary),
-      var(--colorSecondary),
-      var(--colorPrimary),
-      var(--colorSecondary));
+  background: linear-gradient(
+    -45deg,
+    var(--colorPrimary),
+    var(--colorSecondary),
+    var(--colorPrimary),
+    var(--colorSecondary)
+  );
   background-size: 400% 400%;
   -webkit-animation: 3s infinite Gradient, 3s infinite rocking;
   -moz-animation: 3s infinite Gradient, 3s infinite rocking;
@@ -815,11 +835,13 @@ figure.snip1186.hover img {
 .effectGradient:hover {
   text-shadow: 0 3px 6px var(--colorPrimary);
   background-color: var(--colorSecondary);
-  background: linear-gradient(-45deg,
-      var(--colorPrimary),
-      var(--colorSecondary),
-      var(--colorPrimary),
-      var(--colorSecondary));
+  background: linear-gradient(
+    -45deg,
+    var(--colorPrimary),
+    var(--colorSecondary),
+    var(--colorPrimary),
+    var(--colorSecondary)
+  );
   background-size: 400% 400%;
   -webkit-animation: 3s infinite Gradient;
   -moz-animation: 3s infinite Gradient;
@@ -863,8 +885,10 @@ figure.snip1186.hover img {
 
 /* Scale UP  */
 .scale-up-center {
-  -webkit-animation: scale-up-center 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) infinite both;
-  animation: scale-up-center 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) infinite both;
+  -webkit-animation: scale-up-center 0.6s cubic-bezier(0.39, 0.575, 0.565, 1)
+    infinite both;
+  animation: scale-up-center 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) infinite
+    both;
 }
 
 @-webkit-keyframes scale-up-center {
@@ -978,7 +1002,7 @@ figure.snip1186.hover img {
 }
 
 #thanku_section h2 {
-  font-family: MyCustomFont;
+  font-family: Varsity_Regular;
   letter-spacing: 0.1em;
   font-size: 5em;
 }
