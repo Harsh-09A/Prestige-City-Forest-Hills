@@ -139,28 +139,28 @@ aside {
 
 /* Slider */
 
-.carousel-item {
-  height: 100vh;
-  width: 100%;
+/* Slider */
+.carousel {
+  overflow: hidden !important;
+  max-height: calc(100vh - 80px);
 }
 
-.carousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.carousel-indicators .active {
+  background-color: var(--colorSecondary) !important;
 }
 
 @media screen and (max-width: 600px) {
   .carousel-item .banner1 {
-    content: url("../img/banner/mobile_banner11.jpg");
+    content: url("../img/banner/mobile_banner1.jpg");
   }
-
   .carousel-item .banner2 {
-    content: url("../img/banner/banner2.jpg");
+    content: url("../img/banner/mobile_banner2.jpg");
   }
-
   .carousel-item .banner3 {
-    content: url("../img/banner/banner3.jpg");
+    content: url("../img/banner/mobile_banner3.jpg");
+  }
+  .carousel-item .banner4 {
+    content: url("../img/banner/mobile_banner4.jpg");
   }
 }
 
